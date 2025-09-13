@@ -19,7 +19,9 @@
         <tr>
             <td><?= $event['name'] ?></td>
             <td><?= $event['date'] ?></td>
-            <td><?= $event['places'] ?></td>
+            <td><?= $event['places_diff'] ?? $event['places'] ?></td>
+            <td><a href="/event/<?= $event['id'] ?>">Подробнее</a></td>
+            <td><a href="/event/<?=$event['id']?>/book">Забронировать</a></td>
         </tr>
     <?php endforeach; ?>
 </table>
